@@ -1,10 +1,8 @@
 import time
 import sys
-import numpy as numpy
 import pandas as pd
 import selenium
 from math import floor
-from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -19,7 +17,7 @@ def scrape_products_by_category(category, num_products):
     # chrome_options.add_argument('--disable-dev-shm-usage')
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--window-size=1920,1080")
-    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36")
+    # chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36")
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 
     try: 
